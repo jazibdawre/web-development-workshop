@@ -11,7 +11,7 @@ exports.auth = async (req, res, next) => {
             return res.status(401).json({ msg: 'No token, authorization denied' });
         }
 
-        const decoded = jwt.verify(token, config.get('jwtSecret'));
+        const decoded = jwt.verify(token, process.env.JWT_KEY);
         const user = await User.findById(decoded.user.id);
         req.user = user;
         next();
