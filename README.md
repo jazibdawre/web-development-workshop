@@ -9,6 +9,7 @@ Create a .env file with the following contents in the root folder
 ```env
 HASH_SEED=10
 MONGO_URI="mongodb://localhost:27017/Blog-Site-Workshop"
+JWT_KEY='some random string'
 ```
 
 > You can also use MongoDB Atlas instead of a local setup
