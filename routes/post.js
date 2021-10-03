@@ -2,7 +2,7 @@ const express = require("express");
 const asyncHandler = require("express-async-handler");
 const { auth } = require("../middleware/auth");
 
-const { createPost, deletePost, updatePost, getUserPosts } = require("../controllers/post");
+const { createPost, deletePost, updatePost, getUserPosts } = require("../controllers/postController");
 
 const router = express.Router();
 
