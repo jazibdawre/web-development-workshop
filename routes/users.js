@@ -1,6 +1,6 @@
 const express = require("express");
 const asyncHandler = require("express-async-handler");
-const auth = require('../middleware/auth')
+const { auth } = require("../middleware/auth");
 
 const { register, getUsers, getUserById } = require("../controllers/userController");
 

@@ -119,3 +119,4 @@ dist
 
 # Editors
 .vscode/
+package-lock.json
