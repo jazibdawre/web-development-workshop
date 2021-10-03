@@ -6,9 +6,10 @@ const { createPost, deletePost, updatePost, getUserPosts } = require("../control
 
 const router = express.Router();
 
+router.get("/", auth, asyncHandler(getUserPosts));
+router.put("/:id", auth, asyncHandler(updatePost));
+
 router.post("/create-post", auth, asyncHandler(createPost));
-router.delete("/post", auth, asyncHandler(deletePost));
-router.put("/post", auth, asyncHandler(updatePost));
-router.get("/posts", auth, asyncHandler(getUserPosts));
+router.delete("/:id", auth, asyncHandler(deletePost));
 
 module.exports = router;
