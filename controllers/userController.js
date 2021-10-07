@@ -45,7 +45,8 @@ exports.login = async (req, res) => {
 
 	return res.status(200).json({
 		message: "Authorization successful",
-		token: token
+		token: token,
+		id: user._id
 	});
 	
 };
